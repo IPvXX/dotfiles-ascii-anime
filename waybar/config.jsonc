@@ -1,0 +1,82 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "mpris",
+    "clock"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "battery",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": ""
+    }
+  },
+
+  "mpris": {
+    "format": "{player_icon} {artist} - {title}",
+    "format-paused": " {artist} - {title}",
+    "player-icons": {
+      "spotify": "",
+      "default": ""
+    },
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl previous",
+    "on-click-middle": "playerctl next"
+  },
+
+  "clock": {
+    "format": "  {:%H:%M  %d/%m}"
+  },
+
+  "cpu": {
+    "format": "CPU {usage}%"
+  },
+
+  "memory": {
+    "format": "RAM {}%"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "",
+    "format-disconnected": ""
+  },
+
+  "pulseaudio": {
+    "format": "VOL {volume}%",
+    "format-muted": "MUTE"
+  },
+
+  "battery": {
+    "format": "{capacity}%",
+    "format-charging": "⚡ {capacity}%"
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun --location=top -y 15"
+  }
+}
