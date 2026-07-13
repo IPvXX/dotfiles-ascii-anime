@@ -1,5 +1,7 @@
 You know the drill heres some important infos:
 
+I dont know all the requirements for this, but you do need python installed.
+
 move fastfetch folder into ~/.local/share/
 
 move Wallpapers folder into ~/Pictures or change the directory in the waypaper config
